@@ -1,0 +1,228 @@
+.headers{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, 
+        rgba(71, 71, 71, 0.9) 90%,
+        rgba(71, 71, 71, 0.9) 90%
+    );
+    display: flex; /* Используем flexbox для центрирования */
+    align-items: center;
+    justify-content: center;
+}
+div.infoe{
+    display: flex; /* Используем flexbox для центрирования */
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(71, 71, 71, 0.9) 90%, rgba(71, 71, 71, 0.9) 90%);
+     height: 270px;
+      align-items: center;
+}
+.info{
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+}
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(+7px); /* Поднимаем на 7px */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.ims {
+    animation: jump 1.5s ease-in-out infinite; /* Анимация будет повторяться бесконечно */
+    width: 70px;
+    transition: opacity 0.5s ease; /* Плавный переход для исчезновения */
+}
+.logotxt:hover, a.menu:hover, a.menuf:hover{
+    color:#ffffff7e;
+    font-size: 34px;
+}
+.logo{
+    width: 30px;
+}
+.logotxt{  
+    color:#fff;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 52px;
+}
+div.menu{
+    align-items: center;
+    display: flex;
+    max-width: 1160px;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+div.menuf{
+    align-items: center;
+    display: inline-flex;
+    max-width:420px;
+    width: 100%;
+    margin-right: 50px;
+}
+a.menuf, a.menu {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 50px;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden; /* Скрывает все, что выходит за пределы контейнера */
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обеспечивает правильное масштабирование изображения */
+    z-index: 1; /* Устанавливает изображение позади других элементов */
+}
+
+.headers, h1 {
+    position: relative;
+    z-index: 2; /* Устанавливает заголовок и меню выше изображения */
+}
+.wcolor{ 
+    text-shadow: 
+        0 0 4px rgb(0, 0, 0),
+        0 0 4px rgb(0, 0, 0),
+        0 0 4px rgb(0, 0, 0);
+    color: #fff;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans SC', 'Microsoft YaHei UI', sans-serif;
+}
+.attractions{
+    background: linear-gradient(to bottom, 
+        rgba(71, 71, 71, 0.5) 70%,
+        rgba(71, 71, 71, 0.5) 70%);
+
+    border-radius: 8px;
+    max-width: 1200px;
+    margin:50px auto;
+    padding-top: 20px;
+    
+ 
+}
+.name{
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 999999;
+    font-style: italic;
+    margin: auto;
+    font-size: 50px;
+    margin-bottom: 20px;
+   
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-item, .gallery-itemv{
+    display: grid;
+    grid-template-rows: 200px auto; 
+    height: 358px; 
+    background: linear-gradient(to bottom, 
+        rgb(224, 255, 226) 0%,
+        rgb(239, 255, 241) 100%
+    );
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+}
+.gallery-item p, .gallery-itemv p {
+margin: 10px 0; 
+}
+.gallery-item img, .gallery-itemv img {
+    width: 100%; /* Ширина изображения 100% */
+    height: 250px; /* Фиксированная высота изображения */
+    object-fit: cover; /* Обеспечивает правильное масштабир��вание изображения */
+}
+.galleryv{
+    display: grid;
+    grid-template-columns: repeat(2, 400px); 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: auto;
+    padding: 20px;
+}
+.cn{
+    max-width: 860px;
+    margin: auto;
+}
+
+
+
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Расстояние от нижней части окна */
+    right: 20px; /* Расстояние от правой части окна */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Ширина кнопки */
+    height: 50px; /* Высота кнопки */
+    transition: opacity 0.3s ease; /* Плавный переход для появления/исчезновения */
+    animation: jump 1.5s ease-in-out infinite;
+}
+
+.scroll-to-top img {
+    width: 100%; /* Ширина изображения */
+    height: auto; /* Автоматическая высота */
+}
+
+
+/* .gallery-item img {
+    width: 100%;
+    height: 200px;
+}
+.gallery-item p {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    
+} */
+.footergr{
+    margin-top: 50px;
+    background: linear-gradient(to bottom, 
+        rgb(255, 255, 255) 35%,
+        rgba(71, 71, 71, 0.9) 90%
+    );
+    width: 100%;
+    height: 20px;
+}
+.footer{
+    background: rgba(71, 71, 71, 0.5);
+    height: 200px;
+    width: 100%;
+}
