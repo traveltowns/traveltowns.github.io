@@ -221,67 +221,61 @@ margin: 10px 0;
     z-index: 1000;
     opacity: 0; /* Начальная прозрачность */
     visibility: hidden; /* Скрываем поп-ап */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Плав��ый переход */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Плавный переход */
 }
-.popup-overlay.show .popup-content {
-    transform: translateY(0);
-}
+
 .popup-overlay.show {
     opacity: 1; /* Полная непрозрачность */
     visibility: visible; /* Показываем поп-ап */
-} 
+}
 
-
-
-/* ----------------- */
 .popup-content {
     background: white;
     padding: 20px;
     border-radius: 8px;
+    text-align: center;
     position: relative;
-    z-index: 1000;
-    width: 80%;
-    height: 80%;
-    align-content: center;
-
-    /* ---------- */
-
-    transform: translateY(-20px); /* Начальное положение */
+    max-height: 80%; /* Максимальная высота поп-апа */
+    max-width: 80%;
+    overflow: hidden; /* Скрываем переполнение */
     transition: transform 0.3s ease; /* Плавный переход */
 }
 
-
-
-.popup-description {
-    margin-top: 10px;
-    font-size: 28px;
-    font-family: 'Noto Sans SC', 'Microsoft YaHei UI', sans-serif;
-    font-weight: 99;
-    
-    font:bolder;
-   
+.popup-overlay.show .popup-content {
+    transform: translateY(0); /* Возвращаем в исходное положение */
 }
+
 .popup-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap; /* Позволяет элементам обтекать друг друга */
 }
 
 .popup-images {
-    max-width: 45%;
+    width: 45%;
     display: flex;
+    max-height: 800px;
     flex-direction: column;
-    gap: 20px; /* Отступ между изображениями */
-}
-
-.popup-image {
-    width: auto;
-    max-height:350px;
-    
+    gap: 10px; /* Отступ между изображениями */
 }
 
 .popup-description-container {
     width: 50%;
+    overflow-y: auto; 
+    max-height: 600px;
+}
+
+.popup-image {
+     /* Ширина изображения 100% */
+    max-height: 300px; /* Автоматическая высота */
+    
+    object-fit: cover; /* Обеспечивает правильное масштабирование изображения */
+}
+
+.popup-description {
+    font-size: 160%; /* Размер шрифта для описания */
+    overflow: auto; /* Позволяет тексту прокручиваться, если он слишком длинный */
 }
 
 .close-button {
