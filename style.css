@@ -14,8 +14,10 @@ div.infoe{
     align-items: center;
     justify-content: center;
     background: linear-gradient(to bottom, rgba(71, 71, 71, 0.9) 90%, rgba(71, 71, 71, 0.9) 90%);
-     height: 270px;
-      align-items: center;
+    height: fit-content;
+     max-height: 500px;
+    align-items: center;
+    padding: 30px;
 }
 .info{
     font-family: "Alumni Sans Pinstripe", sans-serif;
@@ -38,7 +40,17 @@ div.infoe{
         transform: translateY(0);
     }
 }
+.scroll-to-bottom {
+    position: fixed; /* Фиксированное позиционирование */
+    bottom: 20px; /* Расст��яние от нижней части окна */
+    left: 5% ; /* Расстояние от правой части окна */
+    z-index: 1000; /* Убедитесь, что стрелка выше других элементов */
+}
 
+.scroll-to-bottom img {
+    width: 70px; /* Ширина изображения */
+    height: auto; /* Автоматическая высота */
+}
 .ims {
     animation: jump 1.5s ease-in-out infinite; /* Анимация будет повторяться бесконечно */
     width: 70px;
@@ -157,6 +169,7 @@ body {
     overflow: hidden;
     text-align: center;
     align-items: center;
+    cursor: pointer;
 }
 .gallery-item p, .gallery-itemv p {
 margin: 10px 0; 
@@ -174,19 +187,133 @@ margin: 10px 0;
     margin: auto;
     padding: 20px;
 }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-item {
+    cursor: pointer;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+} */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0; /* Начальная прозрачность */
+    visibility: hidden; /* Скрываем поп-ап */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Плав��ый переход */
+}
+.popup-overlay.show .popup-content {
+    transform: translateY(0);
+}
+.popup-overlay.show {
+    opacity: 1; /* Полная непрозрачность */
+    visibility: visible; /* Показываем поп-ап */
+} 
+
+
+
+/* ----------------- */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1000;
+    width: 80%;
+    height: 80%;
+    align-content: center;
+
+    /* ---------- */
+
+    transform: translateY(-20px); /* Начальное положение */
+    transition: transform 0.3s ease; /* Плавный переход */
+}
+
+
+
+.popup-description {
+    margin-top: 10px;
+    font-size: 28px;
+    font-family: 'Noto Sans SC', 'Microsoft YaHei UI', sans-serif;
+    font-weight: 99;
+    
+    font:bolder;
+   
+}
+.popup-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.popup-images {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Отступ между изображениями */
+}
+
+.popup-image {
+    width: auto;
+    max-height:350px;
+    
+}
+
+.popup-description-container {
+    width: 50%;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
 .cn{
     max-width: 860px;
     margin: auto;
 }
 
 
-
-
-
 .scroll-to-top {
     position: fixed;
-    bottom: 20px; /* Расстояние от нижней части окна */
-    right: 20px; /* Расстояние от правой части окна */
+    bottom: 5%; /* Расстояние от нижней части окна */
+    right: 5%; /* Расстояние от правой части окна */
     display: flex;
     align-items: center;
     justify-content: center;
