@@ -207,18 +207,7 @@ margin: 10px 0;
     border-radius: 8px;
 }
 
-/* .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-} */
+
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -327,18 +316,6 @@ margin: 10px 0;
     width: 100%; /* Ширина изображения */
     height: auto; /* Автоматическая высота */
 }
-
-
-/* .gallery-item img {
-    width: 100%;
-    height: 200px;
-}
-.gallery-item p {
-    padding: 10px;
-    font-size: 16px;
-    color: #333;
-    
-} */
 .footergr{
     margin-top: 50px;
     background: linear-gradient(to bottom, 
