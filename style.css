@@ -366,12 +366,12 @@ body {
     }
 
     .logotxt {
-        font-size: 22px; /* Уменьшение размера шрифта для логотипа */
+        font-size: 20px; /* Уменьшение размера шрифта для логотипа */
     }
 
     div.menu {
         justify-content: flex-end; /* Выравнивание меню по правому краю */
-        padding-right: 10px; /* Отступ от правого края экрана */
+        padding-right: 0px; /* Отступ от правого края экрана */
         max-width: 100%;
     }
 
@@ -383,6 +383,7 @@ body {
     div.menuf {
         margin-right: 0;
         max-width: 65%;
+        padding-right:10px;
 
     }
 
