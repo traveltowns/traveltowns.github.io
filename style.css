@@ -344,7 +344,7 @@ body {
         overflow: auto;
     }
     .logo {
-        width: 20px;
+        width: 18px;
         
     }
     .logotxt {
@@ -376,13 +376,13 @@ body {
     }
 
     a.menuf, a.menu {
-        font-size: 24px; /* Уменьшение размера шрифта для меню */
+        font-size: 22px; /* Уменьшение размера шрифта для меню */
         margin-right: 10px; /* Установка отступа между элементами меню */
     }
 
     div.menuf {
         margin-right: 0;
-        max-width: 70%;
+        max-width: 65%;
 
     }
 
