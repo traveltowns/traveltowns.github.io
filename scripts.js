@@ -15,7 +15,7 @@ const arrow = document.querySelector('.ims');
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
 
-    // Устанавливаем прозрачность стрелки в зависимости от положения прокрутки
+    
     if (scrollPosition > 50) { 
         arrow.style.opacity = '0';
     } else {
@@ -23,53 +23,42 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// scripts.js
+
 const scrollToTopButton = document.getElementById('scrollToTop');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) { // Порог, при котором стрелка появляется
-        scrollToTopButton.style.display = 'flex'; // Показываем стрелку
+    if (window.scrollY > 300) { 
+        scrollToTopButton.style.display = 'flex'; 
     } else {
-        scrollToTopButton.style.display = 'none'; // Скрываем стрелку
+        scrollToTopButton.style.display = 'none'; 
     }
 });
 
-// Добавляем плавный скролл при нажатии на стрелку
+
 scrollToTopButton.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Плавный скролл
+        behavior: 'smooth' 
     });
 });
-// function openPopup(imageSrc1, imageSrc2, description) {
-//     document.getElementById('popup-image-1').src = imageSrc1;
-//     document.getElementById('popup-image-2').src = imageSrc2;
-//     document.getElementById('popup-description').innerText = description;
-//     document.getElementById('popup').style.display = 'flex';
-// }
 
-// function closePopup() {
-//     document.getElementById('popup').style.display = 'none';
-// }
 function openPopup(imageSrc1, imageSrc2, description) {
     document.getElementById('popup-image-1').src = imageSrc1;
     document.getElementById('popup-image-2').src = imageSrc2;
     document.getElementById('popup-description').innerText = description;
     
     const popup = document.getElementById('popup');
-    popup.style.display = 'flex'; // Показываем поп-ап
+    popup.style.display = 'flex'; 
     setTimeout(() => {
-        popup.classList.add('show'); // Добавляем класс для показа поп-апа
-    }, 10); // Небольшая задержка для активации анимации
+        popup.classList.add('show'); 
+    }, 10); 
 }
 
 function closePopup() {
     const popup = document.getElementById('popup');
-    popup.classList.remove('show'); // Убираем класс для скрытия поп-апа
-
-    // Удаляем изображения и текст после завершения анимации
+    popup.classList.remove('show'); 
     setTimeout(() => {
         popup.style.display = 'none';
-    }, 300); // Время должно совпадать с временем анимации
+    }, 300); 
 }
