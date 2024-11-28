@@ -411,8 +411,22 @@ body {
         min-height: 400px;
     }
 }
+@media (max-width: 1400px){
+    .wcolor{
+        font-size: 80px ;
+    } 
+}
+@media (max-width: 1200px){
+    .wcolor{
+        font-size: 45px ;
+    } 
+}
+@media (max-width: 900px){
+    .wcolor{
+        font-size: 35px ;
+    } 
+}
 
-/* Дополнительные стили для улучшения мобильного опыта */
 body {
     overflow-x: hidden; /* Устранение горизонтальной прокрутки */
 }
