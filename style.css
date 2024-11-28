@@ -311,3 +311,91 @@ body {
     height: 200px;
     width: 100%;
 }
+
+
+@media (max-width: 768px) {
+    .logo {
+        width: 20px;
+        
+    }
+    .logotxt {
+        color: #fff;
+        font-family: "Alumni Sans Pinstripe", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        text-decoration: none;
+        font-size: 22px;
+        margin-right: 50px;
+    }
+    
+    .headers {
+        height: 80px; /* Уменьшение высоты заголовка на мобильных устройствах */
+    }
+    
+    .info {
+        font-size: 28px; /* Уменьшение размера шрифта для мобильных устройств */
+    }
+
+    .logotxt {
+        font-size: 22px; /* Уменьшение размера шрифта для логотипа */
+    }
+
+    div.menu {
+        justify-content: flex-end; /* Выравнивание меню по правому краю */
+        padding-right: 10px; /* Отступ от правого края экрана */
+        max-width: 100%;
+    }
+
+    a.menuf, a.menu {
+        font-size: 24px; /* Уменьшение размера шрифта для меню */
+        margin-right: 10px; /* Установка отступа между элементами меню */
+    }
+
+    div.menuf {
+        margin-right: 0;
+        max-width: 70%;
+
+    }
+
+    a.menu:last-child {
+        margin-right: 0;
+    }
+
+    .gallery-item, .gallery-itemv {
+        height: auto; /* Автоматическая высота для элементов галереи */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Уменьшение минимальной ширины для мобильных устройств */
+    }
+
+    .popup-image {
+        max-height: 200px; /* Уменьшение максимальной высоты изображений в попапе */
+    }
+
+    .scroll-to-top, .scroll-to-bottom {
+        width: 40px; /* Уменьшение размера кнопок прокрутки */
+        height: 40px;
+    }
+
+    .footer {
+        height: 150px; /* Уменьшение высоты подвала */
+    }
+
+    .name {
+        font-size: 36px; /* Уменьшение размера шрифта для названий */
+    }
+}
+
+/* Дополнительные стили для улучшения мобильного опыта */
+body {
+    overflow-x: hidden; /* Устранение горизонтальной прокрутки */
+}
+
+.image-container {
+    height: 300px; /* Уменьшение высоты контейнера изображений на мобильных устройствах */
+}
+
+.banner-image {
+    object-fit: cover; /* Обеспечение правильного отображения изображений */
+}
