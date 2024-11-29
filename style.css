@@ -58,6 +58,7 @@ div.infoe {
 
 .logo {
     width: 30px;
+    margin-left: 50px;
 }
 
 .logotxt {
@@ -67,6 +68,7 @@ div.infoe {
     font-style: italic;
     text-decoration: none;
     font-size: 52px;
+    margin-right: 50px;
 }
 
 div.menu {
@@ -454,6 +456,10 @@ body {
     .wcolor{
         font-size: 30px ;
     } 
+    .logo{margin-left: 0px};
+    div.menu {margin-right: 0px;}
+    .logotxt:hover{font-size: 15px;}
+    .menu{margin-right: 0;}
 }
 
 body {
