@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <title>Викторина о достопримечательностях Астраханской области</title>
+    <style>
+        .lab:hover{
+            width: 90%;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/banerquest.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 70%, rgba(255, 255, 255, 0.6) 70%);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.0em;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .question p {
+            font-weight: 500;
+            color: #373737;
+        }
+        .question label {
+            display: block;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .question input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .question label:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-color: #525151fd;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #525151fd;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #434343;
+        }
+        #result {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border: 1px solid #b2ebf2;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #00796b;
+        }
+        .footergr {
+            margin-top: 50px;
+            background: linear-gradient(to bottom,
+                rgb(255, 255, 255) 35%,
+                rgba(71, 71, 71, 0.9) 90%);
+            width: 100%;
+            height: 20px;
+        }
+        .footer {
+            background: rgba(71, 71, 71, 0.9);
+            min-height: 200px;
+            width: 100%;
+        }
+        .ims {
+            animation: jump 1.5s ease-in-out infinite;
+            width: 70px;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="headers">
+        <div id="top" class="menu"> 
+            <div>
+                <a class="logotxt" href="index.html"> <img class="logo" src="images/logo.png"><img>
+                    traveltown
+                </a>
+            </div>
+            <div class="menuf">
+                <a class="menuf" href="monument.html">  Памятники
+                </a>
+                <a class="menu" href="water.html">  Водоемы  </a>
+                <a class="menu" href="museums.html">  Музеи  </a>
+                <a class="menu" href="parks.html">  Парки  </a>
+            </div>  
+        </div>
+    </div>
+    <div class="container">
+        <h1>Викторина о достопримечательностях Астраханской области</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. 
+                    Что изображено на гербе города Астрахани?</p>
+                <label class="lab"><input  type="radio" name="q1" value="Корона и меч" required> Корона и меч</label>
+                 <label class="lab"><input type="radio" name="q1" value="Всадник и лук"> Всадник и лук</label>
+                 <label class="lab"><input type="radio" name="q1" value="Лев и корона"> Лев и корона</label>
+                <span class="result" data-question="q1"></span>
+            </div>
+            <div class="question">
+                <p>2. 
+                    На какой реке расположен город?</p>
+                 <label class="lab"><input type="radio" name="q2" value="На Днепре" required> На Днепре</label>
+                 <label class="lab"><input type="radio" name="q2" value="На Волге"> На Волге</label>
+                 <label class="lab"><input type="radio" name="q2" value="На Оке"> На Оке</label>
+                <span class="result" data-question="q2"></span>
+            </div>
+            <div class="question">
+                <p>3. На сколько административных районов делится город?
+                </p>
+                 <label class="lab"><input type="radio" name="q3" value="На четыре" required> На четыре</label>
+                 <label class="lab"><input type="radio" name="q3" value="На семь"> На семь</label>
+                 <label class="lab"><input type="radio" name="q3" value="На десять"> На десять</label>
+                <span class="result" data-question="q3"></span>
+            </div>
+            <div class="question">
+                <p>4. Кто, взволновав всё Поволжье против царской власти, в июне 1670 года с 12-тысячным войском подошел к Астрахани?</p>
+                 <label class="lab"><input type="radio" name="q4" value="Емельян Пугачёв" required> Емельян Пугачёв</label>
+                 <label class="lab"><input type="radio" name="q4" value="Максим Железняк"> Максим Железняк</label>
+                 <label class="lab"><input type="radio" name="q4" value="Степан Разин"> Степан Разин</label>
+                <span class="result" data-question="q4"></span>
+            </div>
+            <div class="question">
+                <p>5. Когда Астрахань празднует День города?</p>
+                 <label class="lab"><input type="radio" name="q5" value="Первая суббота марта" required> Первая суббота марта</label>
+                 <label class="lab"><input type="radio" name="q5" value=" Второе воскресенье июля"> Второе воскресенье июля</label>
+                 <label class="lab"><input type="radio" name="q5" value="Третье воскресенье сентября"> Третье воскресенье сентября</label>
+                <span class="result" data-question="q5"></span>
+            </div>
+            <div class="question">
+                <p>6. На каком расстояние от Москвы по железной дороге расположен город?</p>
+                 <label class="lab"><input type="radio" name="q6" value="804 км" required> 804 км</label>
+                 <label class="lab"><input type="radio" name="q6" value="1532 км"> 1532 км</label>
+                 <label class="lab"><input type="radio" name="q6" value="1715 км"> 1715 км
+                </label>
+                <span class="result" data-question="q6"></span>
+            </div>
+            <div class="question">
+                <p>7. Сколько метров составляет протяженность стен Астраханского кремля?</p>
+                 <label class="lab"><input type="radio" name="q7" value="510 м" required> 510 м</label>
+                 <label class="lab"><input type="radio" name="q7" value="1487 м"> 1487 м</label>
+                 <label class="lab"><input type="radio" name="q7" value="2115 м">2115 м</label>
+                <span class="result" data-question="q7"></span>
+            </div>
+            <div class="question">
+                <p>8. Какой известный французский писатель в 1858 году посетил Астрахань и опубликовал книгу «Из Парижа в Астрахань. Свежие впечатления от путешествия в Россию»?</p>
+                 <label class="lab"><input type="radio" name="q8" value="Александр Дюма" required> Александр Дюма</label>
+                 <label class="lab"><input type="radio" name="q8" value="Жуль Верн">Жуль Верн</label>
+                 <label class="lab"><input type="radio" name="q8" value="Виктор Гюго"> Виктор Гюго</label>
+                <span class="result" data-question="q8"></span>
+            </div>
+            <div class="question">
+                <p>9. Какой цветок называют «каспийской розой»? Его посадки есть в городской черте Астрахани.</p>
+                 <label class="lab"><input type="radio" name="q9" value="Хризантема" required> Хризантема</label>
+                 <label class="lab"><input type="radio" name="q9" value="Лотос"> Лотос</label>
+                 <label class="lab"><input type="radio" name="q9" value="Орхидея"> Орхидея</label>
+                <span class="result" data-question="q9"></span>
+            </div>
+            <div class="question">
+                <p>10. Как называют жителей города?</p>
+                 <label class="lab"><input type="radio" name="q10" value="астраханцы, астраханец, астраханка" required> астраханцы, астраханец, астраханка</label>
+                 <label class="lab"><input type="radio" name="q10" value="астрахане, астраханен, астраханка"> астрахане, астраханен, астраханка</label>
+                 <label class="lab"><input type="radio" name="q10" value="астраханичи, астраханич, астраханичка"> астраханичи, астраханич, астраханичка</label>
+                <span class="result" data-question="q10"></span>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <div class="footer">
+        <div style="display: flex; align-items: center; padding: 10px; padding-top: 20px;">
+            <img style="display: inline; width: 40px; margin-left: 20%; margin-right: 5px;" src="images/mail.png">  
+            <a href="mailto:al6k5and00r@gmail.com" style="text-decoration: none; display: inline; font-size: 20px;color: black ">al6k5and00r@gmail.com</a>
+        </div>
+        <div style="display: flex; align-items: center; padding: 10px;">
+            <img style="display: inline; width: 40px; margin-left: 20%; margin-right: 5px;" src="images/vk.png">  
+            <a href="https://vk.com/sanw0kk" style="text-decoration: none; display: inline; font-size: 20px;color: black ">@sanw0kk</a>
+        </div>
+        <div style="display: flex; align-items: center; padding: 10px;">
+            <img style="display: inline; width: 40px; margin-left: 20%; margin-right: 5px; height:40px;" src="images/phone.png">  
+            <a href="" style="text-decoration: none; display: inline; font-size: 20px;color: black ">+7 999-(647)-57-70</a>
+        </div>
+    </div>
+
+    <script>
+        const correctAnswers = [
+            "Корона и меч",
+            "Волга",
+            "На четыре",
+            "Степан Разин", 
+            "Третье воскресенье сентября", 
+            "1532 км", 
+            "1487 м", 
+            "Александр Дюма", 
+            "Лотос", 
+            "астраханцы, астраханец, астраханка" 
+        ];
+
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let score = 0;
+            const formData = new FormData(event.target);
+            for (let i = 1; i <= 10; i++) {
+                const answer = formData.get(`q${i}`);
+                const resultElement = document.querySelector(`.result[data-question="q${i}"]`);
+                if (answer === correctAnswers[i - 1]) {
+                    score++;
+                    resultElement.innerHTML = '✅'; // Галочка
+                } else {
+                    resultElement.innerHTML = '❌'; // Крестик
+                }
+            }
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            if (score < 7) {
+                resultDiv.innerText = "вы недостаточно знакомы с этим удивительным городом. приглашаем Вас посетить Астрахань!";
+            } else {
+                resultDiv.innerText = "Вы отлично знакомы с этим удивительным городом. приглашаем Вас посетить Астрахань снова!";
+            }
+        });
+    </script>
+</body>
+</html>

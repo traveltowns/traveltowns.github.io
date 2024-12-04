@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;
+    500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <title>traveltown</title>  
+</head>
+<body>
+    
+    <a href="#top" id="scrollToTop" class="scroll-to-top" style="display: none;">
+        <img src="images/arrow-up.png" alt="Стрелка вверх" />
+    </a>
+    <div class="image-container">
+        <img src="images/baner.jpeg" alt="Баннер" class="banner-image" />
+        <div class="headers">
+            <div id="top" class="menu"> 
+                <div>
+                    <a class="logotxt" href="index.html"> <img class="logo" src="images/logo.png"><img>
+                        traveltown
+                    </a>
+                </div>
+                <div class="menuf">
+                    <a class="menuf" href="monument.html">  Памятники
+                    </a>
+                    <a class="menu" href="water.html">  Водоемы  </a>
+                    <a class="menu" href="museums.html">  Музеи  </a>
+                    <a class="menu" href="parks.html">  Парки  </a>
+                </div>  
+            </div>
+        </div>
+        <h1 align="center" class="wcolor " >Достопримечательности  Астрахани</h1>
+    </div>
+    <div class="infoe">
+        <div id="inf" class="info">
+            <p class="info">Астрахань - древний гостеприимный город под южным ослепительным солнцем, драгоценная жемчужина Нижнего Поволжья - издавна известна как крупный промышленный город не только в России, но и в Европе. «Рыбацкая столица» , «ворота в Каспий» , «Волжская Венеция» - так называют Астрахань, и все эти названия точно отражают географическое и экономическое положение города-форпоста, города-транзита, венчающего устье реки, где пересекаются важнейшие водные и сухопутные магистрали. Город расположен в дельте Волги, где великая река Итиль (средневековое название Волги), самая длинная в Европе, разделяется на множество рукавов. Климат тут благодатный и теплый, а природа щедра и изобильна. Столь древний край богат и интересными местами.</p>
+        </div>
+    </div>
+    <div class="baton-section">
+        <h1 class="baton-sec">Хорошо ли Вы знаете Астрахань?</h1>
+        <h2 class="baton-sec">Пройдите викторину и узнайте это!</h2>
+        <a style="text-decoration: none;" href="question.html">
+            <div class="baton">
+                Пройти викторину!
+            </div>
+        </a>
+    </div>
+    <a href="#inf" class="scroll-to-bottom"><img class="ims" src="images/arrow.png" alt="Стрелка" /></a>
+    <div class="attractions " id="attractions" >
+        <h2 align="center" class="name wcolor">Достопримечательности</h2>
+        <div class="gallery">
+
+                <div class="gallery-item" onclick="openPopup('images/kremlin2.jpg', 'images/kremlin3.jpg', 'Астраханский кремль-жемчужина Астрахани. Кремль построен в конце XVI века на острове, который омывается водами Волги, Царёва, Кутума и Казачьего ерика. Строительство каменной крепости началось во время правления Ивана Грозного, а закончилось при его сыне Фёдоре Иоанновиче. В кремле сохранились два красивых храма — Троицкий XVII века с Кирилловской часовней и Успенский кафедральный собор начала XVIII столетия с усыпальницей астраханских иерархов. Над Пречистенскими воротами, через которые шла дорога от кремля до Белого города, возвышается 80-метровая колокольня, построенная в 1910 году. В северной части стоят Никольские ворота с надвратным храмом Святого Николая Чудотворца. ')">
+                    <img src="images/kremlin.jpg" alt="Сцена 5">
+                    <p>Городской кремль</p>
+                </div>
+            
+            
+                <div class="gallery-item"  onclick="openPopup('images/embankment2.jpg', 'images/embankment3.jpg', 'Астраханская набережная протянулась на 2 км от Дворца бракосочетаний до памятника Петру I на одноимённой площади. Начинается набережная в живописном месте слияния двух рек Волги и Кутум. На астраханской набережной много памятников, которые создают особую атмосферу, среди них — бронзовая скульптура Дамы с собачкой и памятный знак, посвящённый ледовой переправе 1942 года. На набережной имеются четыре фонтана, в том числе светомузыкальный. Вдоль городской набережной выстроились кафе, рестораны с открытыми верандами, сувенирные магазины.')">
+                    <img src="images/embankment.jpg" alt="Сцена 2">
+                    <p>Городская набережная</p>
+                </div>
+            
+
+                <div class="gallery-item" onclick="openPopup('images/uspsobor2.jpg', 'images/uspsobor3.jpg', 'Успенский собор Астраханского кремля считается одним из лучших образцов русского церковного зодчества начала XVIII века и является единственным из сохранившихся в России архитектурных храмовых комплексов, где храм и Лобное место соединены. Первое деревянное здание было построено при Иване Грозном в 1568 году, когда царь даровал городу Владимирскую икону Божьей Матери. К началу XVII века собор сильно обветшал. Пристроенный к нему в 1602 году каменный храм тоже простоял недолго. Современный собор, сохранивший до наших дней первоначальный облик, построили в 1710 году. В его архитектуре сочетается московское барокко и неоклассицизм.')">
+                    <img src="images/uspsobor.jpg" alt="Сцена 3">
+                    <p>Успенский собор</p>
+                </div>
+            
+            
+                <div class="gallery-item" onclick="openPopup('images/sarai2.jpg', 'images/sarai3.jpg', 'Сарай-Бату — туристический комплекс в 170 км от Астрахани. Комплекс расположен в селе Селитренное. С середины XIII века на этом месте располагалась одна из столиц Золотой Орды. Считается, что Сарай-Бату основан ханом Батыем. Отсюда совершались набеги и походы завоевателей, сюда привозили дань покорённые народы. Городище протянулось вдоль берега реки Ахтубы на 13 км. В 2010 году после съёмок фильма «Святитель Алексий», действие которого происходит в столице Золотой Орды XIV века, декорации разбирать не стали. Так возник туристический комплекс, полностью погружающий гостей в атмосферу величайшей восточной империи.')">
+                    <img src="images/sarai.jpg" alt="Сцена 4">
+                    <p>Сарай-Бату</p>
+                </div>
+            
+
+                <div class="gallery-item" onclick="openPopup('images/operbal2.png', 'images/operbal3.jpg', 'Астраханский театр оперы и балета - это великолепное белоснежное здание в русском стиле, которое возвышается на холме в окружении сквера с фонтанами. Внутри театра гостей встречает огромный светлый холл, напоминающий главный зал мечети. Спектакли в театре идут на двух сценах — в большом зале, который вмещает 1200 зрителей, и малом на 120 мест.')">
+                    <img src="images/operbal.jpg" alt="Сцена 5">
+                    <p>Театр оперы и балета </p>
+                </div>
+
+                
+
+                <div class="gallery-item" onclick="openPopup('images/fountain2.jpg', 'images/fountain3.jpg', 'Самый известный в Астрахани — так называемый Поющий, Музыкальный, или Петровский, фонтан. Он появился на главной набережной в 2009 году, к 450-летнему юбилею города — и сразу же стал одним из главных его украшений.Чаша музыкального фонтана по площади превышает 850 квадратных метров! Он разделен на несколько уровней, в каждом из которых под всемирно известные произведения поочередно вздымаются вверх струи воды. Но самая главная красота начинается вечером — фонтан подсвечивается яркими огнями, а десятки людей любуются настоящим спектаклем из воды.')">
+                    <img src="images/fountain.jpg" alt="Сцена 2">
+                    <p>Музыкальный фонтан</p>
+                </div>
+        
+        </div>
+    </div>
+    <div id="popup" class="popup-overlay" style="display: none;" onclick="closePopup()">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <button class="close-button" onclick="closePopup()">×</button>
+            <div class="popup-container">
+                <div class="popup-images">
+                    <img id="popup-image-1" src="" alt="" class="popup-image">
+                    <img id="popup-image-2" src="" alt="" class="popup-image">
+                </div>
+                <div class="popup-description-container">
+                    <p id="popup-description" class="popup-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+<div style="margin-top: 30px; display: flex; justify-content: center;">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A72ba2b33bd926bfefdf740cfffb0539a083d1ea03002ccc6e33bfb5d6dbe04cc&amp;width=1200&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+<div class="footergr">
+    
+</div>
+<div class="footer">
+    <div style="display: flex; align-items: center; padding: 10px; padding-top: 20px;">
+        <img style="display: inline; width: 40px; margin-left: 20%; margin-right: 5px; ;" src="images/mail.png">  
+        <a href="mailto:al6k5and00r@gmail.com" style="text-decoration: none; display: inline; font-size: 20px;color: black ">al6k5and00r@gmail.com</a>
+    </div>
+    <div style="display: flex; align-items: center; padding: 10px;">
+        <img style="display: inline; width: 40px; margin-left: 20%; margin-right: 5px; ;" src="images/vk.png">  
+        <a href="https://vk.com/sanw0kk" style="text-decoration: none; display: inline; font-size: 20px;color: black ">@sanw0kk</a>
+    </div>
+    <div style="display: flex; align-items: center; padding: 10px;">
+        <img style="display: inline; width: 40px; margin-left: 20%; margin-right: 5px; height:40px  ;" src="images/phone.png">  
+        <a href="" style="text-decoration: none; display: inline; font-size: 20px;color: black ">+7 999-(647)-57-70</a>
+    </div>
+</div>
+<script src="scripts.js"></script>
+
+</body>
+</html>
