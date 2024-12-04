@@ -380,10 +380,50 @@ h2.baton-sec{
     .wcolor{
         font-size: 35px ;       
     } 
-    .logo{margin-left: 0px};
-    div.menu {margin-right: 0px;}
-    .logotxt:hover{font-size: 15px;}
-    .menu{margin-right: 0;}
+    .baton-section{
+    margin: auto;
+    max-width: 1160px;
+    padding: 20px;
+    padding-top: 0px;
+    height: auto;
+    text-align: center;
+    font-family:"Alumni Sans Pinstripe", sans-serif;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: linear-gradient(to bottom, rgba(71, 71, 71, 0.5) 70%, rgba(71, 71, 71, 0.5) 70%) ;
+    color:rgb(213, 255, 216 );
+    border-radius: 8px;
+    }
+
+    h1.baton-sec{
+        font-weight: 9999900;
+        font-style:normal ;
+        font-size: 40px;
+    }
+    
+    h2.baton-sec{
+        font-weight: 900;
+        font-style:italic ;
+        font-size: 35px;
+    }
+    .baton{
+        background-color: rgb(71, 71, 71);
+        width: 400px;
+        margin: auto;
+        font-size: 30px;
+        border-radius: 8px;
+        color:#ffffff;
+    }
+    .baton:hover{
+        width: 450px;
+        background-color: rgb(107, 107, 107);
+        font-size: 45px;
+    }
+        .logo{margin-left: 0px};
+        div.menu {margin-right: 0px;}
+        .logotxt:hover{font-size: 15px;}
+        .menu{margin-right: 0;}
+    }
 }
 
 @media (max-width: 768px) {
