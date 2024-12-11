@@ -12,7 +12,8 @@
     <title>Викторина о достопримечательностях Астраханской области</title>
     <style>
         .lab:hover{
-            width: 90%;
+            transform: scale(1.05);
+            transition: 0.2s;;
         }
         
         body {
@@ -26,6 +27,12 @@
             background-repeat: no-repeat;
             overflow-x: hidden;
         }
+        .container:hover{
+            margin-top: 90px;
+            transform: scale(1.05);
+            transition: 0.2s;
+            margin-bottom: 90px;
+        }
         .container {
             max-width: 600px;
             margin: auto;
@@ -36,16 +43,16 @@
             margin-top: 50px;
             margin-bottom: 50px;
         }
-        @media (max-width: 900px){
-        h1{
-            font-size: 25px;
-        }
-        }
         h1 {
             text-align: center;
             color: #333;
             font-size: 2.0em;
             margin-bottom: 20px;
+        }
+        @media (max-width: 900px){
+            h1{
+                font-size: 25px;
+            }
         }
         .question {
             margin-bottom: 20px;
@@ -86,6 +93,8 @@
         }
         button:hover {
             background-color: #434343;
+            transform: scale(1.05);
+            transition: 0.2s;
         }
         #result {
             display: none;
@@ -194,7 +203,7 @@
             <div class="question">
                 <p>8. Какой известный французский писатель в 1858 году посетил Астрахань и опубликовал книгу «Из Парижа в Астрахань. Свежие впечатления от путешествия в Россию»?</p>
                  <label class="lab"><input type="radio" name="q8" value="Александр Дюма" required> Александр Дюма</label>
-                 <label class="lab"><input type="radio" name="q8" value="Жуль Верн">Жуль Верн</label>
+                 <label class="lab"><input type="radio" name="q8" value="Жуль Верн">Жюль Верн</label>
                  <label class="lab"><input type="radio" name="q8" value="Виктор Гюго"> Виктор Гюго</label>
                 <span class="result" data-question="q8"></span>
             </div>
